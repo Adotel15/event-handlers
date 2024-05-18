@@ -1,7 +1,7 @@
 import ioService from 'readline';
 
 class IOInterface {
-    ioHandler;
+    ioHandler: ioService.Interface;
 
     constructor() {
         this.ioHandler = ioService.createInterface({
