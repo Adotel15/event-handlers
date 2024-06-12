@@ -18,7 +18,7 @@ class Users {
         });
     }
 
-    // TODO: No me convence esto aquí
+    // TODO: Change this
     prompt = async (prompt: string) => {
         return this.ioInterface.prompt(prompt);
     };
