@@ -12,7 +12,6 @@ class Users {
     constructor() {
         this.ioInterface = new IOInterface();
         this.eventEmmiter = new EventsAPI();
-
         this.ioInterface.ioHandler.on('close', () => {
             console.log('App is closing...');
         });
@@ -31,11 +30,9 @@ class Users {
         const data: UserType[] = JSON.parse(
             await fs.readFile('./db.json', 'utf-8')
         );
-
         if (!Array.isArray(data)) {
             throw new Error('JSON file does not contain an array');
         }
-
         return data;
     };
 
